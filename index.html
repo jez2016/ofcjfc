@@ -5,372 +5,338 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OFCJFC 2026 Sponsorship Opportunities</title>
   <style>
-    :root {
-      --club-red: #e24d1f;
-      --club-red-dark: #c84118;
-      --club-purple: #7a3fd1;
-      --club-text: #1f2937;
-      --club-muted: #6b7280;
-      --club-bg: #f4f4f5;
-      --card-bg: #ffffff;
-      --border: #e5e7eb;
-      --success: #0f9f6e;
-      --danger: #d62f2f;
-      --shadow: 0 16px 40px rgba(15, 23, 42, 0.10);
-      --radius: 20px;
-    }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #fafafa 0%, #f2f2f2 100%);
-      color: var(--club-text);
+      color: #222;
+      background: #fff;
     }
     .page {
-      max-width: 1120px;
-      margin: 24px auto;
-      background: var(--card-bg);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .hero {
-      padding: 28px 36px 22px;
-      background: linear-gradient(135deg, rgba(226,77,31,0.10), rgba(122,63,209,0.08));
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-top {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .logo-wrap {
-      width: 108px;
-      height: 108px;
-      border-radius: 50%;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 6mm 7mm;
+      margin: 0 auto;
       background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      flex: 0 0 auto;
-      overflow: hidden;
     }
-    .logo-wrap img {
-      width: 100%;
-      height: 100%;
+    .header {
+      display: grid;
+      grid-template-columns: 24mm 1fr 58mm;
+      gap: 5mm;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 3mm;
+    }
+    .logo img {
+      width: 24mm;
+      height: 24mm;
       object-fit: cover;
+      border-radius: 50%;
       display: block;
     }
-    h1 {
+    .title h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 18px;
+      color: #d94b1e;
       line-height: 1.05;
-      color: var(--club-red-dark);
     }
-    .subtitle {
-      margin-top: 6px;
-      font-size: 1.08rem;
+    .title .sub {
+      margin-top: 1mm;
+      color: #7a3fd1;
+      font-size: 10px;
       font-weight: 700;
-      color: var(--club-purple);
-      letter-spacing: 0.02em;
       text-transform: uppercase;
     }
-    .about {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-    .about p {
-      margin: 0;
-      font-size: 0.98rem;
-      line-height: 1.55;
-    }
     .reach {
-      background: rgba(255,255,255,0.78);
-      border: 1px solid rgba(226,77,31,0.15);
-      border-radius: 18px;
-      padding: 14px 16px;
-      font-size: 0.93rem;
-      line-height: 1.55;
+      font-size: 9px;
+      line-height: 1.25;
+      background: #faf7f5;
+      border: 1px solid #eadfd9;
+      border-radius: 8px;
+      padding: 2.5mm;
     }
-    .section {
-      padding: 28px 36px;
+    .intro {
+      margin-top: 3mm;
+      font-size: 9.2px;
+      line-height: 1.28;
     }
     .section-title {
-      margin: 0 0 16px;
-      font-size: 1.1rem;
-      letter-spacing: 0.03em;
-      color: var(--club-purple);
+      margin: 3.5mm 0 2mm;
+      font-size: 10px;
+      color: #7a3fd1;
+      font-weight: 700;
       text-transform: uppercase;
     }
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 2.5mm;
     }
     .card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      background: #fff;
     }
-    .card.gold { border-color: rgba(226,77,31,0.4); box-shadow: 0 14px 28px rgba(226,77,31,0.12); }
-    .card-head {
-      padding: 18px 18px 14px;
-      color: white;
+    .head {
+      color: #fff;
+      padding: 2.5mm;
     }
-    .gold .card-head { background: linear-gradient(135deg, var(--club-red), #ff6a39); }
-    .silver .card-head { background: linear-gradient(135deg, #7b8794, #a7b1bc); }
-    .bronze .card-head { background: linear-gradient(135deg, #9a5b2b, #c47b43); }
+    .gold .head { background: linear-gradient(135deg, #e24d1f, #ff7346); }
+    .silver .head { background: linear-gradient(135deg, #7c8793, #aab3bd); }
+    .bronze .head { background: linear-gradient(135deg, #995923, #c98045); }
+
     .tier {
-      margin: 0;
-      font-size: 1.1rem;
+      font-size: 10px;
       font-weight: 800;
-      letter-spacing: 0.04em;
       text-transform: uppercase;
+      margin: 0;
     }
     .price {
-      margin-top: 6px;
-      font-size: 1.85rem;
+      margin-top: 1mm;
+      font-size: 16px;
       font-weight: 800;
       line-height: 1;
     }
     .price span {
-      font-size: 0.88rem;
+      font-size: 8px;
       font-weight: 600;
-      opacity: 0.95;
     }
     .note {
-      margin-top: 6px;
-      font-size: 0.84rem;
+      margin-top: 1mm;
+      font-size: 7.5px;
       font-weight: 600;
-      opacity: 0.95;
     }
-    .features {
+    ul {
       list-style: none;
       margin: 0;
-      padding: 14px 18px 18px;
-      display: grid;
-      gap: 10px;
-      font-size: 0.92rem;
-      line-height: 1.35;
-      flex: 1;
+      padding: 2.5mm;
     }
-    .features li {
+    li {
+      font-size: 8.15px;
+      line-height: 1.18;
       display: flex;
-      gap: 10px;
-      align-items: flex-start;
+      gap: 1.5mm;
+      margin-bottom: 1mm;
     }
-    .icon {
-      min-width: 20px;
-      font-weight: 800;
-      line-height: 1.2;
+    .tick {
+      color: #0a9b69;
+      font-weight: 700;
+      min-width: 3mm;
     }
-    .tick { color: var(--success); }
-    .cross { color: var(--danger); }
-    .label { font-weight: 700; }
+    .cross {
+      color: #d03030;
+      font-weight: 700;
+      min-width: 3mm;
+    }
+    .lbl {
+      font-weight: 700;
+    }
     .inkind {
-      background: linear-gradient(135deg, rgba(226,77,31,0.08), rgba(255,255,255,1));
-      border: 1px solid rgba(226,77,31,0.18);
-      border-radius: 20px;
-      padding: 18px 20px;
-      margin-top: 6px;
+      margin-top: 3mm;
+      border: 1px solid #eadfd9;
+      border-radius: 10px;
+      background: #fcf8f5;
+      padding: 2.5mm;
     }
     .inkind h3 {
-      margin: 0 0 8px;
-      color: var(--club-red-dark);
-      font-size: 1.05rem;
+      margin: 0 0 1mm;
+      font-size: 10px;
+      color: #d94b1e;
     }
     .inkind p {
       margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.55;
+      font-size: 8.6px;
+      line-height: 1.22;
     }
     .footer {
-      border-top: 1px solid var(--border);
-      padding: 22px 36px 28px;
+      margin-top: 3mm;
       display: grid;
-      grid-template-columns: 1.25fr 1fr;
-      gap: 18px;
-      align-items: start;
-      background: #fff;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 3mm;
     }
-    .contact-box {
-      background: #fafafa;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 16px 18px;
+    .box {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 2.5mm;
     }
-    .contact-box h3, .support-box h3 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-      color: var(--club-purple);
+    .box h3 {
+      margin: 0 0 1mm;
+      font-size: 9.5px;
+      color: #7a3fd1;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
     }
-    .contact-box p, .support-box p {
-      margin: 6px 0;
-      font-size: 0.94rem;
-      line-height: 1.45;
+    .box p {
+      margin: 0.5mm 0;
+      font-size: 8.5px;
+      line-height: 1.22;
     }
-    .support-box {
-      padding: 4px 0;
+    .small {
+      margin-top: 2mm;
+      font-size: 7.5px;
+      color: #666;
+      line-height: 1.2;
     }
-    a { color: var(--club-red-dark); text-decoration: none; }
-    @media (max-width: 900px) {
-      .about, .cards, .footer { grid-template-columns: 1fr; }
-    }
-    @media print {
-      @page { size: A4; margin: 10mm; }
-      body { background: #fff; }
-      .page {
-        margin: 0;
-        max-width: none;
-        box-shadow: none;
-        border-radius: 0;
+
+    @media screen {
+      body {
+        background: #f3f4f6;
+        padding: 24px;
       }
-      .hero { padding: 16px 20px 12px; }
-      .section { padding: 16px 20px; }
-      .footer { padding: 16px 20px 18px; }
-      h1 { font-size: 22px; }
-      .subtitle { font-size: 12px; }
-      .about p, .reach, .features, .inkind p, .contact-box p, .support-box p { font-size: 12px; }
-      .section-title, .contact-box h3, .support-box h3 { font-size: 12px; }
-      .price { font-size: 24px; }
-      .tier { font-size: 14px; }
-      .logo-wrap { width: 82px; height: 82px; }
-      .cards { gap: 10px; }
-      .features { gap: 6px; padding: 10px 12px 12px; }
-      .card-head { padding: 12px; }
-      .inkind { padding: 12px 14px; }
-      .contact-box { padding: 12px 14px; }
-      a { color: inherit; text-decoration: none; }
+      .page {
+        box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        width: auto;
+        min-height: auto;
+        padding: 16px;
+      }
+      .header,
+      .cards,
+      .footer {
+        grid-template-columns: 1fr;
+      }
+      .logo img {
+        width: 96px;
+        height: 96px;
+      }
+      .title h1 {
+        font-size: 28px;
+      }
+      .title .sub {
+        font-size: 13px;
+      }
+      .reach,
+      .intro,
+      .inkind p,
+      .box p,
+      li {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .section-title,
+      .inkind h3,
+      .box h3,
+      .tier {
+        font-size: 15px;
+      }
+      .price {
+        font-size: 28px;
+      }
+      .price span,
+      .note,
+      .small {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <section class="hero">
-      <div class="hero-top">
-        <div class="logo-wrap">
-          <img src="./logo.png" alt="OFCJFC logo" width="108" height="108" />
+    <div class="header">
+      <div class="logo">
+        <img src="./logo.png" alt="OFCJFC logo">
+      </div>
+      <div class="title">
+        <h1>Olinda Ferny Creek Junior Football Club</h1>
+        <div class="sub">2026 Sponsorship Opportunities</div>
+      </div>
+      <div class="reach">
+        <strong>Our Reach</strong><br>
+        900+ average visitors per game<br>
+        2,100+ social media followers<br>
+        130+ family members<br>
+        8 home games per season
+      </div>
+    </div>
+
+    <div class="intro">
+      The Olinda Ferny Creek Junior Football Club is home to the mighty Young Bloods, one of the largest and most successful clubs in the Outer East Junior Football League. With 150+ players across 8 boys and girls teams, the club provides a positive environment for children to develop their skills through Australian Rules football.
+    </div>
+
+    <div class="section-title">Sponsorship Packages</div>
+
+    <div class="cards">
+      <div class="card gold">
+        <div class="head">
+          <p class="tier">Gold</p>
+          <div class="price">$1,000 <span>per year</span></div>
+          <div class="note">3-year commitment</div>
         </div>
-        <div>
-          <h1>Olinda Ferny Creek Junior Football Club</h1>
-          <div class="subtitle">2026 Sponsorship Opportunities</div>
+        <ul>
+          <li><span class="tick">✓</span><span><span class="lbl">Playing Tops:</span> Major logo recognition</span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Ground &amp; Scoreboard Signage</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Social, Website &amp; Family Nights</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Footy Records &amp; Year Book</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Finals Recognition</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Karaoke &amp; Graduation Night</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Custom Leverage Meeting</span></span></li>
+        </ul>
+      </div>
+
+      <div class="card silver">
+        <div class="head">
+          <p class="tier">Silver</p>
+          <div class="price">$500 <span>per year</span></div>
+          <div class="note">Plus one-off signage fee</div>
         </div>
+        <ul>
+          <li><span class="cross">✕</span><span><span class="lbl">Playing Tops</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Ground &amp; Scoreboard Signage</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Social, Website &amp; Family Nights</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Footy Records &amp; Year Book</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Finals Recognition</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Karaoke &amp; Graduation Night</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Custom Leverage Meeting</span></span></li>
+        </ul>
       </div>
-      <div class="about">
-        <p>
-          The Olinda Ferny Creek Junior Football Club is home to the mighty Young Bloods, one of the largest and most successful clubs in the Outer East Junior Football League. With 150+ players across 8 boys and girls teams, we provide a positive environment for children to develop their skills through Australian Rules football.
-        </p>
-        <div class="reach">
-          <strong>Our Reach</strong><br>
-          900+ average visitors per game<br>
-          2,100+ social media followers<br>
-          130+ family members<br>
-          8 home games per season
+
+      <div class="card bronze">
+        <div class="head">
+          <p class="tier">Bronze</p>
+          <div class="price">$250 <span>per year</span></div>
+          <div class="note">Affordable local support option</div>
         </div>
+        <ul>
+          <li><span class="cross">✕</span><span><span class="lbl">Playing Tops</span></span></li>
+          <li><span class="cross">✕</span><span><span class="lbl">Ground Signage</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Scoreboard Signage</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Social, Website &amp; Family Nights</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Footy Records &amp; Year Book</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Finals, Karaoke &amp; Graduation</span></span></li>
+          <li><span class="tick">✓</span><span><span class="lbl">Custom Leverage Meeting</span></span></li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <h2 class="section-title">Sponsorship Packages</h2>
-      <div class="cards">
-        <article class="card gold">
-          <div class="card-head">
-            <p class="tier">Gold</p>
-            <div class="price">$1,000 <span>per year</span></div>
-            <div class="note">3-year commitment</div>
-          </div>
-          <ul class="features">
-            <li><span class="icon tick">✓</span><span><span class="label">Playing Tops:</span> Major logo recognition</span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Home Ground Signage</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Scoreboard Signage</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Social Media</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Website Recognition</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Family Nights</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Footy Records</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Year Book Logo</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Finals Recognition</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Karaoke Night Promotion</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Graduation Night Recognition</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Custom Leverage Meeting</span></span></li>
-          </ul>
-        </article>
+    <div class="inkind">
+      <h3>In-Kind Sponsorship — Partner With Us</h3>
+      <p>
+        Local businesses can support the Young Bloods through goods or services in place of a cash sponsorship, with marketing and signage options similar to our packages. If your business would like to contribute in a practical way, the club would love to discuss a tailored in-kind partnership.
+      </p>
+    </div>
 
-        <article class="card silver">
-          <div class="card-head">
-            <p class="tier">Silver</p>
-            <div class="price">$500 <span>per year</span></div>
-            <div class="note">Plus one-off signage fee</div>
-          </div>
-          <ul class="features">
-            <li><span class="icon cross">✕</span><span><span class="label">Playing Tops:</span> Not included</span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Home Ground Signage</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Scoreboard Signage</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Social Media</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Website Recognition</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Family Nights</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Footy Records</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Year Book Logo</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Finals Recognition</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Karaoke Night Promotion</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Graduation Night Recognition</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Custom Leverage Meeting</span></span></li>
-          </ul>
-        </article>
-
-        <article class="card bronze">
-          <div class="card-head">
-            <p class="tier">Bronze</p>
-            <div class="price">$250 <span>per year</span></div>
-            <div class="note">Affordable local support option</div>
-          </div>
-          <ul class="features">
-            <li><span class="icon cross">✕</span><span><span class="label">Playing Tops:</span> Not included</span></li>
-            <li><span class="icon cross">✕</span><span><span class="label">Home Ground Signage:</span> Not included</span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Scoreboard Signage</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Social Media</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Website Recognition</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Family Nights</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Footy Records</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Year Book Logo</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Finals Recognition</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Karaoke Night Promotion</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Graduation Night Recognition</span></span></li>
-            <li><span class="icon tick">✓</span><span><span class="label">Custom Leverage Meeting</span></span></li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top: 0;">
-      <div class="inkind">
-        <h3>In-Kind Sponsorship — Partner With Us</h3>
-        <p>
-          We invite local businesses to support the Young Bloods through contributions of goods or services in place of a cash sponsorship. In-kind partners help us run game days, club events and community activities, while gaining meaningful visibility and connection with our players, families and supporters, with the option of marketing and signage options similar to our packages. If you run a local business and would like to explore how your products or services could support the club, we’d love to discuss a tailored in-kind sponsorship that works for both of us.
-        </p>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="contact-box">
+    <div class="footer">
+      <div class="box">
         <h3>Contact Us</h3>
         <p><strong>Sponsorship Coordinator:</strong> Jerome Higgins</p>
         <p><strong>Phone:</strong> 0405 025 411</p>
-        <p><strong>Email:</strong> <a href="mailto:secretary@ofcjfc.org.au">secretary@ofcjfc.org.au</a> or <a href="mailto:president@ofcjfc.org.au">president@ofcjfc.org.au</a></p>
+        <p><strong>Email:</strong> secretary@ofcjfc.org.au or president@ofcjfc.org.au</p>
       </div>
-      <div class="support-box">
+      <div class="box">
         <h3>Supporting Our Club</h3>
-        <p>The Olinda Ferny Creek Junior Football Club is a not-for-profit organisation. Sponsorship is a key part of our income and helps us develop better footballers and better members of our local Hills community.</p>
+        <p>
+          The Olinda Ferny Creek Junior Football Club is a not-for-profit organisation. Sponsorship is a key part of club income and helps develop better footballers and better members of the local Hills community.
+        </p>
       </div>
-    </footer>
+    </div>
+
+    <div class="small">
+      OFCJFC sponsorship summary for prospective partners — 2026 season.
+    </div>
   </div>
 </body>
 </html>
